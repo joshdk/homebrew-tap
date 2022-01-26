@@ -5,13 +5,13 @@
 class Retry < Formula
   desc "Rerun a command until it eventually succeeds, or doesn't"
   homepage "https://github.com/joshdk/retry"
-  version "1.3.0-rc2"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/joshdk/retry/releases/download/v1.3.0-rc2/retry-darwin-amd64.tar.gz"
-      sha256 "6d28743598b96920836a1e8bebbec122a007fc4fc8d7925502c5ffa452cacfba"
+      url "https://github.com/joshdk/retry/releases/download/v1.3.0/retry-darwin-amd64.tar.gz"
+      sha256 "70056ec46829186c2106428e0efe0a3c73d1aa6513c5b2f4ef5f18d1328aed02"
 
       def install
         bin.install "retry"
@@ -21,8 +21,8 @@ class Retry < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/joshdk/retry/releases/download/v1.3.0-rc2/retry-linux-amd64.tar.gz"
-      sha256 "743a985f77af26808dbeb406daced871d3b4296a64380cdb53edb8282292d33d"
+      url "https://github.com/joshdk/retry/releases/download/v1.3.0/retry-linux-amd64.tar.gz"
+      sha256 "585c3c35cca9347019d1ed64c6004dccec10c73aa196c91bf9ca164340049af8"
 
       def install
         bin.install "retry"
