@@ -5,21 +5,21 @@
 class AwsConsole < Formula
   desc "Generate a temporary login URL for the AWS Console"
   homepage "https://github.com/joshdk/aws-console"
-  version "0.2.0"
+  version "0.2.1-rc0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/joshdk/aws-console/releases/download/v0.2.0/aws-console-darwin-arm64.tar.gz"
-      sha256 "6291b2d55ca242b872777b7b7324f410bd489c27f773594342c69ae5ede9fb07"
+    if Hardware::CPU.intel?
+      url "https://github.com/joshdk/aws-console/releases/download/v0.2.1-rc0/aws-console-darwin-amd64.tar.gz"
+      sha256 "fe78d99e6866c636dbbd16b48ef3aeaaf30fb00fac2f67fccc4a7e25927f62fc"
 
       def install
         bin.install "aws-console"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/joshdk/aws-console/releases/download/v0.2.0/aws-console-darwin-amd64.tar.gz"
-      sha256 "7d56002149b665b84e97eda857c177804490ed7e1f4a0f1fca8f790ba54d1ef3"
+    if Hardware::CPU.arm?
+      url "https://github.com/joshdk/aws-console/releases/download/v0.2.1-rc0/aws-console-darwin-arm64.tar.gz"
+      sha256 "5a82974984fcb28fc7782eeb609096f41630089c1d945e27a42538923121f3b1"
 
       def install
         bin.install "aws-console"
@@ -29,8 +29,8 @@ class AwsConsole < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/joshdk/aws-console/releases/download/v0.2.0/aws-console-linux-amd64.tar.gz"
-      sha256 "72e5cf31b130ddeae33838e20a6f5ad79c03063b1aba6cbbf87922e9305efdca"
+      url "https://github.com/joshdk/aws-console/releases/download/v0.2.1-rc0/aws-console-linux-amd64.tar.gz"
+      sha256 "bb714260ff23dbfb3160fb76a0748dbcd1d0b8aef7ac09864e82075cd9541023"
 
       def install
         bin.install "aws-console"
