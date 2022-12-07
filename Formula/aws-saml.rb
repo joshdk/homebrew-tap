@@ -5,21 +5,21 @@
 class AwsSaml < Formula
   desc "Generate AWS credentials from a SAML IdP login"
   homepage "https://github.com/joshdk/aws-saml"
-  version "0.1.0-rc.2"
+  version "0.1.0-rc.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/joshdk/aws-saml/releases/download/v0.1.0-rc.2/aws-saml-darwin-amd64.tar.gz"
-      sha256 "6c25393d8d9fe0e1990523d57bc613c2219cc850e2f0cb30f28e48c3b1573029"
+    if Hardware::CPU.arm?
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.1.0-rc.3/aws-saml-darwin-arm64.tar.gz"
+      sha256 "65db49e0fcb28da665d7e4ee240764b2a1aabbb379d04b6b5ed30ce960fa203c"
 
       def install
         bin.install "aws-saml"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/joshdk/aws-saml/releases/download/v0.1.0-rc.2/aws-saml-darwin-arm64.tar.gz"
-      sha256 "a94123ddadb44198c2edbfce11b237c09e6908bfebd9847fcaee512e3cbce105"
+    if Hardware::CPU.intel?
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.1.0-rc.3/aws-saml-darwin-amd64.tar.gz"
+      sha256 "8962b8e1bf4da1a40c3bf07b6762b9bcbb61aa9c7b92c4c78080531b7f85dac8"
 
       def install
         bin.install "aws-saml"
@@ -29,8 +29,8 @@ class AwsSaml < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/joshdk/aws-saml/releases/download/v0.1.0-rc.2/aws-saml-linux-amd64.tar.gz"
-      sha256 "fef9a90b438d2f18b5f78304b424908e9ad0400eb5618cde2ee497875917f9b4"
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.1.0-rc.3/aws-saml-linux-amd64.tar.gz"
+      sha256 "7649dae51c17416161aff0f99b55c4284871781085c486b46febc67fda144ad2"
 
       def install
         bin.install "aws-saml"
