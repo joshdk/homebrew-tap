@@ -5,13 +5,21 @@
 class Retry < Formula
   desc "Rerun a command until it eventually succeeds, or doesn't"
   homepage "https://github.com/joshdk/retry"
-  version "1.3.1"
+  version "1.4.0-rc1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/joshdk/retry/releases/download/v1.3.1/retry-darwin-amd64.tar.gz"
-      sha256 "a47db65869dcbdb27699a266cd4756d26548e795346884cf1e5d2045d1457202"
+      url "https://github.com/joshdk/retry/releases/download/v1.4.0-rc1/retry-darwin-amd64.tar.gz"
+      sha256 "7a552d5be910c14e79c7bdb6806bd10761980bfed315e4333e69787e1a7fc088"
+
+      def install
+        bin.install "retry"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/joshdk/retry/releases/download/v1.4.0-rc1/retry-darwin-arm64.tar.gz"
+      sha256 "3bea9bf7c3796f7156ae2c2fb0d64e591da64eb2f7173d65592803329ce7906e"
 
       def install
         bin.install "retry"
@@ -20,9 +28,17 @@ class Retry < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joshdk/retry/releases/download/v1.4.0-rc1/retry-linux-arm64.tar.gz"
+      sha256 "fd7290caa6868d8fbad512742be1533b4298cef405fe54fb4622e96cc2c06e68"
+
+      def install
+        bin.install "retry"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/joshdk/retry/releases/download/v1.3.1/retry-linux-amd64.tar.gz"
-      sha256 "8a3141fefc99839e07c6d6757f622ea186d88b4f3f686db73f75418d4705a3cb"
+      url "https://github.com/joshdk/retry/releases/download/v1.4.0-rc1/retry-linux-amd64.tar.gz"
+      sha256 "d14abb9510745e80ba9d3d3b1ac1d95427f772f3df87f1260436a7d8c171e361"
 
       def install
         bin.install "retry"
@@ -30,9 +46,10 @@ class Retry < Formula
     end
   end
 
-  def caveats; <<~EOS
-    Run retry --help for usage
-  EOS
+  def caveats
+    <<~EOS
+      Run retry --help for usage
+    EOS
   end
 
   test do
