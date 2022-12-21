@@ -5,21 +5,21 @@
 class Retry < Formula
   desc "Rerun a command until it eventually succeeds, or doesn't"
   homepage "https://github.com/joshdk/retry"
-  version "1.4.0-rc1"
+  version "1.4.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/joshdk/retry/releases/download/v1.4.0-rc1/retry-darwin-amd64.tar.gz"
-      sha256 "7a552d5be910c14e79c7bdb6806bd10761980bfed315e4333e69787e1a7fc088"
+    if Hardware::CPU.arm?
+      url "https://github.com/joshdk/retry/releases/download/v1.4.0/retry-darwin-arm64.tar.gz"
+      sha256 "af0f93ec1a474bdad05de7aa02e44dad36972e9eee1cbff6c577f43f9b7ca026"
 
       def install
         bin.install "retry"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/joshdk/retry/releases/download/v1.4.0-rc1/retry-darwin-arm64.tar.gz"
-      sha256 "3bea9bf7c3796f7156ae2c2fb0d64e591da64eb2f7173d65592803329ce7906e"
+    if Hardware::CPU.intel?
+      url "https://github.com/joshdk/retry/releases/download/v1.4.0/retry-darwin-amd64.tar.gz"
+      sha256 "e24778ac45364eef3546e3d9339345e795200c6eee73b40b53bd121eb7cc987a"
 
       def install
         bin.install "retry"
@@ -28,17 +28,17 @@ class Retry < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joshdk/retry/releases/download/v1.4.0-rc1/retry-linux-arm64.tar.gz"
-      sha256 "fd7290caa6868d8fbad512742be1533b4298cef405fe54fb4622e96cc2c06e68"
+    if Hardware::CPU.intel?
+      url "https://github.com/joshdk/retry/releases/download/v1.4.0/retry-linux-amd64.tar.gz"
+      sha256 "16ae3a87228ed9236293e4dfe29e68357c3ab3c42362824f7a3f880ad7345984"
 
       def install
         bin.install "retry"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/joshdk/retry/releases/download/v1.4.0-rc1/retry-linux-amd64.tar.gz"
-      sha256 "d14abb9510745e80ba9d3d3b1ac1d95427f772f3df87f1260436a7d8c171e361"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joshdk/retry/releases/download/v1.4.0/retry-linux-arm64.tar.gz"
+      sha256 "1108d7d590c93966bd95cc830da5512a877e8b2df2969d8ea21119c15d40cb39"
 
       def install
         bin.install "retry"
