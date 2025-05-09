@@ -5,21 +5,21 @@
 class AwsSaml < Formula
   desc "Generate AWS credentials from a SAML IdP login"
   homepage "https://github.com/joshdk/aws-saml"
-  version "0.2.0-rc.0"
+  version "0.2.0-rc.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.0/aws-saml-darwin-amd64.tar.gz"
-      sha256 "be246b05b999767e8bc78116f63b5d3763e5a5ff6349981b4e52d35a489cbea6"
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.1/aws-saml-darwin-amd64.tar.gz"
+      sha256 "c51402dc66f8da107d9eeec34fd28948b3307428c67ea5dc05e872a846f3c72d"
 
       def install
         bin.install "aws-saml"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.0/aws-saml-darwin-arm64.tar.gz"
-      sha256 "d70c971662edd8d7f82f8fe216515e4d89165161953d5090d8039a1d13ac2606"
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.1/aws-saml-darwin-arm64.tar.gz"
+      sha256 "b4b9b41d7d3e113a03412d62c5b879c2a84e3c8e8b00dc7448384b7fd9540030"
 
       def install
         bin.install "aws-saml"
@@ -29,15 +29,15 @@ class AwsSaml < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.0/aws-saml-linux-amd64.tar.gz"
-      sha256 "a66c1723105e46d45ca12ab1e1afc4f46aef9ce87b1ffd7f6cab6c5ffbd12f5f"
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.1/aws-saml-linux-amd64.tar.gz"
+      sha256 "76fdfba29094526f6c077c3935fbcbad494d11471465fe1ceee0b23686a10ed3"
       def install
         bin.install "aws-saml"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.0/aws-saml-linux-arm64.tar.gz"
-      sha256 "3be8c630670bee0d9e7d04187be3009cd1244ebe28f5dad04101fa6cf473ff8c"
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.1/aws-saml-linux-arm64.tar.gz"
+      sha256 "e079a9bdbfb688980ddf355b14b587861e2eb33b86a17ff7056f3370b4cbc481"
       def install
         bin.install "aws-saml"
       end
