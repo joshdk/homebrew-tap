@@ -5,21 +5,21 @@
 class AwsSaml < Formula
   desc "Generate AWS credentials from a SAML IdP login"
   homepage "https://github.com/joshdk/aws-saml"
-  version "0.1.0-rc.3"
+  version "0.2.0-rc.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/joshdk/aws-saml/releases/download/v0.1.0-rc.3/aws-saml-darwin-arm64.tar.gz"
-      sha256 "65db49e0fcb28da665d7e4ee240764b2a1aabbb379d04b6b5ed30ce960fa203c"
+    if Hardware::CPU.intel?
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.0/aws-saml-darwin-amd64.tar.gz"
+      sha256 "be246b05b999767e8bc78116f63b5d3763e5a5ff6349981b4e52d35a489cbea6"
 
       def install
         bin.install "aws-saml"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/joshdk/aws-saml/releases/download/v0.1.0-rc.3/aws-saml-darwin-amd64.tar.gz"
-      sha256 "8962b8e1bf4da1a40c3bf07b6762b9bcbb61aa9c7b92c4c78080531b7f85dac8"
+    if Hardware::CPU.arm?
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.0/aws-saml-darwin-arm64.tar.gz"
+      sha256 "d70c971662edd8d7f82f8fe216515e4d89165161953d5090d8039a1d13ac2606"
 
       def install
         bin.install "aws-saml"
@@ -28,10 +28,16 @@ class AwsSaml < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/joshdk/aws-saml/releases/download/v0.1.0-rc.3/aws-saml-linux-amd64.tar.gz"
-      sha256 "7649dae51c17416161aff0f99b55c4284871781085c486b46febc67fda144ad2"
-
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.0/aws-saml-linux-amd64.tar.gz"
+      sha256 "a66c1723105e46d45ca12ab1e1afc4f46aef9ce87b1ffd7f6cab6c5ffbd12f5f"
+      def install
+        bin.install "aws-saml"
+      end
+    end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/joshdk/aws-saml/releases/download/v0.2.0-rc.0/aws-saml-linux-arm64.tar.gz"
+      sha256 "3be8c630670bee0d9e7d04187be3009cd1244ebe28f5dad04101fa6cf473ff8c"
       def install
         bin.install "aws-saml"
       end
