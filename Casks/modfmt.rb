@@ -3,7 +3,7 @@ cask "modfmt" do
   name "modfmt"
   desc "Formatter for go.mod and go.work files"
   homepage "https://github.com/joshdk/modfmt"
-  version "0.3.2"
+  version "0.4.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "modfmt" do
   on_macos do
     on_intel do
       url "https://github.com/joshdk/modfmt/releases/download/v#{version}/modfmt-darwin-amd64.tar.gz"
-      sha256 "917f1d9ac07ad9b7126b6965c350c87736594869b0c09b1ad23b6b8929099a10"
+      sha256 "2529427c5be83731bd89cf6b47ad620c14555bc76c61f24722eac9aaa47ed496"
     end
     on_arm do
       url "https://github.com/joshdk/modfmt/releases/download/v#{version}/modfmt-darwin-arm64.tar.gz"
-      sha256 "feea70436eff2c6d769f1dca533a15a949806c815a1e8af610ebcb1fea2dd444"
+      sha256 "5f9b461b5ecd96cf129f465f01cf0e3bb170b1cff73f84901d89668d831820a2"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/joshdk/modfmt/releases/download/v#{version}/modfmt-linux-amd64.tar.gz"
-      sha256 "add8f623cb0f5a80f049ea1a198eb3b01ec05d0fa4714eba54f198de2393bf44"
+      sha256 "d9083a268ecd92bfb29c8e15d900d880ace825341e219e19f1e0cc372eef6223"
     end
     on_arm do
       url "https://github.com/joshdk/modfmt/releases/download/v#{version}/modfmt-linux-arm64.tar.gz"
-      sha256 "d3e2534ffb81caa1f5d926b7612fb4ba23efef5c1d444991af6a0c3645122024"
+      sha256 "ba6a960b905e206bda2e79ceb355354884c5d83256f26623102b0882044b7964"
     end
   end
 
