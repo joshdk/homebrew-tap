@@ -14,22 +14,22 @@ cask "krf" do
   on_macos do
     on_intel do
       url "https://github.com/joshdk/krf/releases/download/v#{version}/krf-darwin-amd64.tar.gz"
-      sha256 "44e824744e3ce01e4f242a27c9b607fc75c323cae5a9a167d4538dc1f1da1266"
+      sha256 "c6ee9d418ad237caa6b460bfa98898714861f85ab7d97978be167341c49428b6"
     end
     on_arm do
       url "https://github.com/joshdk/krf/releases/download/v#{version}/krf-darwin-arm64.tar.gz"
-      sha256 "a9c18fb5d6f0a381c5bf5d5ae1d6fb222eaa149b2c7f7cff2c82d1c4b84a4329"
+      sha256 "81cb6b0657134b5aaf145ea49d88bb8383330ad4cc758c95532b44a8cb5cfcee"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/joshdk/krf/releases/download/v#{version}/krf-linux-amd64.tar.gz"
-      sha256 "dcca457d2a06b861278bc5c1cd9439c40cdb72ae8cf32fe68efe0b56c92d4a8d"
+      sha256 "b45ca86d8d72c61fc3f4ce297ddcf967113c91c833761d783ef8dd2c0a5416cb"
     end
     on_arm do
       url "https://github.com/joshdk/krf/releases/download/v#{version}/krf-linux-arm64.tar.gz"
-      sha256 "b98920f325c5569e3d462b988e77517cd59ee478b7aa47da83d6ed0d24b485b0"
+      sha256 "c57c83443e1c62bf17182357a635d9043d57123af5732d7fb80546e8da00a4c8"
     end
   end
 
