@@ -3,7 +3,7 @@ cask "krf" do
   name "krf"
   desc "Command line utility for filtering collections of Kubernetes resources"
   homepage "https://github.com/joshdk/krf"
-  version "0.3.0"
+  version "0.4.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "krf" do
   on_macos do
     on_intel do
       url "https://github.com/joshdk/krf/releases/download/v#{version}/krf-darwin-amd64.tar.gz"
-      sha256 "3fa77938ee1a603c69766d71619f574ba926e5efdc8c535d62125e447a2f7ea2"
+      sha256 "b5337e5b03e6d9fba4ad80a97232e1b59392ddf2ead6940cd62bd58edad44698"
     end
     on_arm do
       url "https://github.com/joshdk/krf/releases/download/v#{version}/krf-darwin-arm64.tar.gz"
-      sha256 "946b955a2551edee1729e3a293b2f82f05a9e876b0dd56d39d1495dd4e772e9c"
+      sha256 "10092c63a34e85eee12164380eb760022939eafd7571e8e490466d62ff74604e"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/joshdk/krf/releases/download/v#{version}/krf-linux-amd64.tar.gz"
-      sha256 "7832d75949e47b2d0f09fe81a0be07d8405ec04f3f5999483eaa88e9fa88cf38"
+      sha256 "9f12285864bd058a6676e833146675ca4d9bd465b587e8c18cb3cf9dd735a332"
     end
     on_arm do
       url "https://github.com/joshdk/krf/releases/download/v#{version}/krf-linux-arm64.tar.gz"
-      sha256 "67ba8444b28c61cd2b46302845b0f54d62325dcf2563195bf18964ea05b3ea43"
+      sha256 "9484865964a0dda8d065b233d801b605bbe5419f9358071aa19a80b75b762006"
     end
   end
 
